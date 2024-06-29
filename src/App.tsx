@@ -52,8 +52,14 @@ function App() {
   return (
     <>
       <h1>Sirozhka</h1>
-      <p>
-        <code>{"await new Promise(() => {})"}</code>
+      <p style={{ alignSelf: "flex-start", textAlign: "start" }}>
+        <code style={{ fontSize: 17 }}>
+          <span style={{ color: "#545454" }}>
+            {"//happy birthday alcotimer script"}
+          </span>
+          <br />
+          {'setTimeout(() => supplyAlcoholInside("40%"), endOfTheDay)'}
+        </code>
       </p>
       <div className="card">
         <div className="buttons">
