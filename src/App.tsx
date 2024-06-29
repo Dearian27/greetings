@@ -22,7 +22,7 @@ function App() {
             background: "white",
             borderRadius: 10,
             padding: "8px 12px",
-            color: "black",
+            color: "#363636",
             gap: "5px",
           }}
         >
@@ -38,8 +38,12 @@ function App() {
         </span>,
         { id: "123", duration: 999999 }
       );
-      await new Promise(() => {});
-      toast.success("Опа...");
+      setTimeout(() => {
+        toast.loading("Ладно...", { id: "123", duration: 2000 });
+      }, 10000);
+      setTimeout(() => {
+        toast.success("Все, можеш уже виходити", { id: "123", duration: 4000 });
+      }, 11800);
     } catch (err) {
       toast.error("Що бля?", { id: "123" });
     }
@@ -81,7 +85,7 @@ function App() {
           : "Click on the Vite and React logos to more"}
       </p>
       {confetti && <ReactConfetti />}
-      <Toaster position="bottom-center" />
+      <Toaster reverseOrder={true} position="bottom-center" />
     </>
   );
 }
