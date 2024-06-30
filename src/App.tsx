@@ -39,11 +39,17 @@ function App() {
         { id: "123", duration: 999999 }
       );
       setTimeout(() => {
-        toast.loading("Ладно...", { id: "123", duration: 2000 });
+        toast.success("Син божий", { id: "121", duration: 2500 });
+      }, 9000);
+      setTimeout(() => {
+        toast.success("NotTryHard", { id: "120", duration: 2500 });
+      }, 9500);
+      setTimeout(() => {
+        toast.success("Dearian", { id: "119", duration: 2000 });
       }, 10000);
       setTimeout(() => {
-        toast.success("Все, можеш уже виходити", { id: "123", duration: 4000 });
-      }, 11800);
+        toast.success("Чекаєш 5 вересня?", { id: "123", duration: 4000 });
+      }, 12000);
     } catch (err) {
       toast.error("Що бля?", { id: "123" });
     }
